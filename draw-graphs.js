@@ -62,7 +62,7 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
 
   Highcharts.chart("tibberdata-" + moduleId, {
     chart: {
-      backgroundColor: "#000000",
+      backgroundColor: config.graphBackground,
       marginTop: 10 + config.adjustTopMargin,
       marginLeft: 80 + config.adjustLeftMargin,
       marginRight: 60 + config.adjustRightMargin
@@ -122,7 +122,7 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
                 fontSize: config.graphLabelFontSize
               },
               x: 57 + config.adjustPriceLabelsX,
-              y: 13
+              y: -3 + config.adjustPriceLabelsY,
             }
           },
           {
@@ -154,7 +154,7 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
                 fontSize: config.graphLabelFontSize
               },
               x: 57 + config.adjustPriceLabelsX,
-              y: -3
+              y: -3 + config.adjustPriceLabelsY,
             }
           }
         ]
@@ -162,15 +162,15 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
       {
         // Secondary yAxis (consumption, right)
         title: {
-          text: "Consumption",
+          text: "",
           style: {
-            color: "#000000"
+            color: "transparent"
           }
         },
         labels: {
           enabled: false
         },
-        gridLineColor: "#000000",
+        gridLineColor: "transparent",
         min: 0,
         // max: Math.ceil(maxConsumption),
         opposite: true
@@ -231,7 +231,7 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
   }
 
   function seriesPrice(config, priceData) {
-    console.log("priceData: ", priceData);
+    //console.log("priceData: ", priceData);
     return {
       name: "Powerprice",
       type: config.priceChartType,
@@ -349,8 +349,8 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
         ) +
         " " +
         tibber.consumptionUnit(),
-      backgroundColor: "#000",
-      borderColor: "#000",
+      backgroundColor: config.consumptionLabelBackgroundColor,
+      borderColor: config.consumptionLabelBorderColor,
       y: 0,
       align: "left",
       verticalAlign: "middle",
@@ -381,8 +381,8 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
         ) +
         " " +
         tibber.consumptionUnit(),
-      backgroundColor: "#000",
-      borderColor: "#000",
+      backgroundColor: config.consumptionLabelBackgroundColor,
+      borderColor: config.consumptionLabelBorderColor,
       y: 0,
       align: "left",
       verticalAlign: "middle",
