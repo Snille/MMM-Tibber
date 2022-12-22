@@ -32,7 +32,7 @@ Go to your `MagicMirror/modules` folder and write
 
     git clone https://github.com/Snille/MMM-Tibber.git
     cd MMM-Tibber
-    npm install
+    npm install --force
 
 ## Configuration
 
