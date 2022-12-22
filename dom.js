@@ -18,7 +18,7 @@ function dom(moduleId, config, translate) {
 
   const name = moduleId.substr(moduleId.indexOf("MMM"));
 
-  Log.info("Translating CURRENT in dom() to " + translate("CURRENT"));
+  //Log.info("Translating CURRENT in dom() to " + translate("CURRENT"));
 
   // Tibber chart
   const graphs = document.createElement("div");

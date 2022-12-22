@@ -115,8 +115,8 @@ class TibberData {
         })
         .filter((c) => c.x >= showFromTime),
     });
-    console.log("showFromTime: ", showFromTime);
-    console.log("res: ", res);
+    //console.log("showFromTime: ", showFromTime);
+    //console.log("res: ", res);
     return res;
   }
 

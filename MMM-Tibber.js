@@ -198,7 +198,7 @@ Module.register("MMM-Tibber", {
         this.config.currentGaugeNominalValue;
       this.config.powerGaugeMaxValue = Math.floor((max + 1200) / 1000) * 1000;
       Log.info("Setting max power to " + this.config.powerGaugeMaxValue);
-      Log.info("Translating CURRENT to " + this.translate("CURRENT"));
+      //Log.info("Translating CURRENT to " + this.translate("CURRENT"));
     }
 
     if (

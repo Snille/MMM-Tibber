@@ -38,7 +38,7 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
     series.push(...seriesAdditionalCosts(config, priceData));
   config.showConsumption &&
     series.push(...seriesConsumption(config, consumptionData));
-  // console.log("series: ", series);
+    //console.log("series: ", series);
 
   // Annotation labels
   const annotationsLabels = [];
@@ -248,7 +248,7 @@ function drawGraphs(moduleId, tibber, config, sumAdditionalCosts, savingsData) {
   }
 
   function seriesSavings(config, savingsData) {
-    console.log("savingsData: ", savingsData);
+    //console.log("savingsData: ", savingsData);
     return {
       name: "Savings",
       type: config.savingsChartType,
