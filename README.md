@@ -30,7 +30,7 @@ Vertical Gauges:
 
 Go to your `MagicMirror/modules` folder and write
 
-    git clone https://github.com/ottopaulsen/MMM-Tibber
+    git clone https://github.com/Snille/MMM-Tibber.git
     cd MMM-Tibber
     npm install
 
@@ -75,6 +75,7 @@ config: {
   adjustTopMargin: 0,
   graphWidth: null, // Uses available width by default
   graphHeight: 200,
+  graphBackground: "transparent", // Can be any color (#ffffff = White, #000000 = Black) 
   // Price curve
   showPrice: true,
   priceChartType: "column", // column, line or spline
@@ -116,10 +117,13 @@ config: {
   minPriceColor: "#00bb00",
   maxPriceColor: "#ee0000",
   adjustPriceLabelsX: 0, // Adjust position sideways in pixels (pos or neg)
+  adjustPriceLabelsY: 0, // Adjust position up/down in pixels (pos or neg)
   // Min/Max consumption labels
   showMinConsumption: true,
   showMaxConsumption: true,
   adjustConsumptionLabelsX: 0, // Adjust position sideways in pixels (pos or neg)
+  consumptionLabelBackgroundColor: "#000000", // Can be any color (#ffffff = White, #000000 = Black) 
+  consumptionLabelBorderColor: "#000000", // Can be any color (#ffffff = White, #000000 = Black) 
   // Additional costs
   additionalCostPerKWH: [],
   showAdditionalCostsGraph: true,
